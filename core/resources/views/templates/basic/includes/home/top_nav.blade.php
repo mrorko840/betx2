@@ -18,18 +18,18 @@ $noticeCaption = getContent('notice.content',true);
         <div class="ml-auto col-auto pl-0">
 
             <div class="row">
-                <div class="custom-control custom-switch pt-2">
+                {{-- <div class="custom-control custom-switch pt-2">
                     <input type="checkbox" class="custom-control-input switch-info text-align-center" id="darklayout" >
                     <label class="custom-control-label" for="darklayout">
                         <span class="material-icons">
                             mode_night
                         </span>
                     </label>
-                </div>
+                </div> --}}
     
-                <a href="notification.html" class=" btn btn-40 btn-link" data-toggle="modal" data-target="#noticeModal">
+                <a href="javascript:void(0)" class="btn btn-warning btn-30 neo-shadow btn-link mt-2 mr-3" data-toggle="modal" data-target="#noticeModal">
                     <span class="material-icons">notifications_none</span>
-                    <span class="counter"></span>
+                    {{-- <span class="counter"></span> --}}
                 </a>
                 
             </div>

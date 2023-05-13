@@ -151,7 +151,7 @@ $yourLinks = getContent('your_links.content', true);
     </header> --}}
 
     <!-- screen loader -->
-    <div class="container-fluid h-100 loader-display">
+    {{-- <div class="container-fluid h-100 loader-display">
         <div class="row h-100">
             <div class="align-self-center col">
                 <div class="logo-loading">
@@ -169,7 +169,7 @@ $yourLinks = getContent('your_links.content', true);
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     @yield('content')
 
