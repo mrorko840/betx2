@@ -572,7 +572,7 @@
         outline: none;
         border-bottom: 0px solid rgba(0, 0, 0, 0);
         border-radius: 20px;
-        background: #e0e0e0;
+        background: #fffdeb;
         box-shadow: inset 5px 5px 10px #bebebe,
             inset -5px -5px 10px #ffffff !important;
     }
