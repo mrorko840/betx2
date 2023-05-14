@@ -118,6 +118,27 @@ $yourLinks = getContent('your_links.content', true);
     <!-- custom css -->
     @include('templates.basic.layouts.custom.custom_css')
 
+    <style>
+        /* loaderCustom */
+        .custom_preload{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999999999;
+            background-color: hsla(0, 0%, 100%, 0.538);
+        }
+        .loderCustom{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% -50%);
+            box-shadow:  5px 5px 10px #9b9b9b,
+             -5px -5px 10px #ffffff;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -171,8 +192,16 @@ $yourLinks = getContent('your_links.content', true);
         </div>
     </div> --}}
 
+    <!-- Preloader Custom -->
+    <div id="preLoadCustom">
+        <div class="custom_preload d-flex align-items-center justify-content-center">
+            <img width="90px" class="loaderCustom" src="{{asset('assets/images/preloader/loader.webp')}}" alt="">
+        </div>
+    </div>
+
     @yield('content')
 
+    <!--Deposit and Withdraw Preset-->
     @php
         $DandW = json_decode($general->d_and_w_preset, true);
     @endphp
@@ -322,6 +351,10 @@ $yourLinks = getContent('your_links.content', true);
                 timer: 2100
             })
         }
+        //preloader custom//
+        $(window).on('load', function () {
+            $('#preLoadCustom').delay(100).fadeOut(100);
+        });
         //sidebar Back Function
         const sideBarBack = () => {
             $('.backdrop').click()
